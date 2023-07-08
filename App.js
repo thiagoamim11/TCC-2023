@@ -1,23 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Logo } from './src/componentes/Logo';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Cadastro from './src/telas/Cadastro';
-//import Login from './src/telas/Login';
+import Login from './src/telas/Login';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View>
-    
-   {/*
-      <Login/>
 
-  */}
-      
-      <Cadastro/>
-      
-    </View>
+
+   
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login"> 
+        <Stack.Screen name="Login" component={Login} /> 
+        <Stack.Screen name="Cadastro" component={Cadastro} /> 
+      </Stack.Navigator>
+    </NavigationContainer>
+  
+  
+
+  
   );
 }
-
-
-
