@@ -1,7 +1,18 @@
-import React from "react";
-import { StyleSheet } from "react-native";
+import React,{useState} from "react";
+import { StyleSheet,Text } from "react-native";
 
 
-export const Login = () => {
+const Login = () => {
+ return(
+
+    <Text>Ola</Text>
+
+
+
     
+);
 }
+
+
+
+export default Login ();
