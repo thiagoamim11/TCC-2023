@@ -3,6 +3,7 @@ import { StyleSheet, View, Image, SafeAreaView,TextInput } from "react-native";
 
 export const Logo = () => {
 
+
   return (
     <SafeAreaView style={estilos.container}>
       <View>
@@ -15,25 +16,42 @@ export const Logo = () => {
 
 
 
-const estilos = StyleSheet.create({
-  container: {
-    marginBottom: 30 , 
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor:'#FF8C00',
-  },
-  logoImage: {
-    width: 200, // Ajuste o valor para aumentar ou diminuir a largura da imagem
-    height: 280, // Ajuste o valor para aumentar ou diminuir a altura da imagem
-    resizeMode: 'contain',
-    backgroundColor:'#FF8C00',
-  },
 
 
-  input:{
-    borderRadius:20,
-    marginTop:25,
-  },
-});
+
+
+  
+
+
+const estilos = StyleSheet.create ({
+    container: {
+        height: 150,
+        width: '100%',
+        backgroundColor: '#FF800B',
+        marginBottom: 10,
+        alignItems: 'center', 
+        justifyContent:'center',    
+        
+    },
+
+   
+
+
+    logoImage: {
+      width: 150, // Ajuste o valor para aumentar ou diminuir a largura da imagem
+      height: 100, // Ajuste o valor para aumentar ou diminuir a altura da imagem
+      resizeMode: 'contain',
+      backgroundColor:'#fff',
+      borderRadius: 30,
+      borderWidth: 3,
+      borderColor: 'black',
+    },
+
+    /*
+    input:{
+      borderRadius:20,
+      marginTop:25
+    }*/
+})
 
 

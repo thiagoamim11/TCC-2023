@@ -4,7 +4,7 @@ import { Logo } from '../componentes/Logo';
 import { StatusBar } from 'expo-status-bar';
 
 
-const Cadastro = () => {
+export default function Cadastro ({navigation}) {
     return(
 
     <SafeAreaView style={estilos.container}>
@@ -19,7 +19,7 @@ const Cadastro = () => {
       />
        <TextInput
         style={estilos.input}
-        placeholder="E-mail"
+        placeholder="email"
         backgroundColor='white'
         placeholderTextColor="black"
       />
@@ -58,11 +58,11 @@ const Cadastro = () => {
 
       <SafeAreaView style={estilos.posicao_button}>
 
-      <TouchableOpacity style={estilos.button} onPress={onPress} >
+      <TouchableOpacity style={estilos.button} onPress={() => navigation.navigate('Login')}  >
         <Text style={estilos.texto}>Voltar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={estilos.button1} onPress={onPress}>
+      <TouchableOpacity style={estilos.button1} onPress={() => navigation.navigate('Login')}>
         <Text style={estilos.texto}>Confirmar</Text>
       </TouchableOpacity>
         
@@ -75,7 +75,6 @@ const Cadastro = () => {
 );
 }
 
-export default Cadastro;
 
 const estilos = StyleSheet.create ({
   input: {
@@ -89,7 +88,7 @@ const estilos = StyleSheet.create ({
   },
 
   container:{
-    backgroundColor:'#FF8C00',
+    backgroundColor:'#FF800B',
     
   },
 
@@ -119,8 +118,8 @@ const estilos = StyleSheet.create ({
   posicao_button:{
     flexDirection:'row',
     justifyContent: 'space-between',
-    marginTop:55,
-    marginBottom:'20%',
+    marginTop:'35%',
+    marginBottom:'80%',
     marginHorizontal:30,
     
    
