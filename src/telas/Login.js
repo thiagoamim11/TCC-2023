@@ -30,7 +30,7 @@ export default function Login({ navigation }) {
       </View>
 
       <View style={estilos.containerBotao}>
-        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('Cadastro')}>
+        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('UsuarioLogado')}>
           <Text style={estilos.texto1}>ENTRAR</Text>
         </TouchableOpacity>
 
@@ -83,6 +83,7 @@ const estilos = StyleSheet.create({
   texto2: {
     fontWeight: 'bold',
     color: '#0864be',
+    textDecorationLine: 'underline',
   },
 
   containerBotao: {
