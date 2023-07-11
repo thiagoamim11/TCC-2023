@@ -30,13 +30,16 @@ export default function Login({ navigation }) {
       </View>
 
       <View style={estilos.containerBotao}>
-        <TouchableOpacity style={estilos} onPress={() => navigation.navigate('Cadastro')}>
-          <Text>Logar</Text>
+        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('Cadastro')}>
+          <Text style={estilos.texto1}>ENTRAR</Text>
         </TouchableOpacity>
 
+      <View style={estilos.botaoCadastrar}>
+        <Text>Não tem uma conta? </Text>
         <TouchableOpacity style={estilos} onPress={() => navigation.navigate('Cadastro')}>
-          <Text>Cadastra-se</Text>
+          <Text style={estilos.texto2}>Cadastra-se</Text>
         </TouchableOpacity>
+        </View>
       </View>
 
 
@@ -69,9 +72,22 @@ const estilos = StyleSheet.create({
 
   },
 
+  texto1: {
+    fontSize: 18,
+    color: '#FF800B',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    justifyContent: 'center',
+  },  
+
+  texto2: {
+    fontWeight: 'bold',
+    color: '#0864be',
+  },
+
   containerBotao: {
-    justifyContent: 'space-around',
-    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    flexDirection: 'column',
     
   },
 
@@ -80,8 +96,23 @@ const estilos = StyleSheet.create({
     backgroundColor: 'black',
     padding: 10,
     borderRadius:20,
-  }
+  },
 
+  botaoLogin: {
+    width: '90%',
+    backgroundColor: 'black',
+    borderWidth:  2,
+    fontSize: 15,
+    border: 1,
+    marginTop: 15,
+    justifyContent: 'center',
+    height: 40,
+   },
+
+  botaoCadastrar: {
+    flexDirection: 'row',
+    paddingTop: 5,
+  },
 
 })
 
