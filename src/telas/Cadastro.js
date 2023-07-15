@@ -15,27 +15,23 @@ export default function Cadastro ({navigation}) {
         style={estilos.input}
         placeholder="Nome"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
        <TextInput
         style={estilos.input}
         placeholder="email"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
 
       <TextInput
         style={estilos.input}
         placeholder="Celular"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
 
       <TextInput
         style={estilos.input}
         placeholder="Endereço"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
 
       <TextInput
@@ -44,7 +40,6 @@ export default function Cadastro ({navigation}) {
         keyboardType="numeric"
         placeholder="Senha"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
 
       <TextInput
@@ -53,7 +48,6 @@ export default function Cadastro ({navigation}) {
         keyboardType="numeric"
         placeholder="Confirmar Senha"
         backgroundColor='white'
-        placeholderTextColor="black"
       />
 
       <SafeAreaView style={estilos.posicao_button}>
@@ -118,7 +112,7 @@ const estilos = StyleSheet.create ({
   posicao_button:{
     flexDirection:'row',
     justifyContent: 'space-between',
-    marginTop:'35%',
+    marginTop:'15%',
     marginBottom:'80%',
     marginHorizontal:30,
     

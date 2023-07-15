@@ -6,9 +6,6 @@ import { Logo } from "../componentes/Logo";
 export default function Login({ navigation }) {
   return (
 
-
-
-
     <SafeAreaView style={estilos.container}>
       <Logo />
 
@@ -30,7 +27,7 @@ export default function Login({ navigation }) {
       </View>
 
       <View style={estilos.containerBotao}>
-        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('UsuarioLogado')}>
+        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('TelaDoUsuario')}>
           <Text style={estilos.texto1}>ENTRAR</Text>
         </TouchableOpacity>
 
