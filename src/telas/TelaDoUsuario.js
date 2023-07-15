@@ -1,9 +1,9 @@
 import React from "react";
-import { SafeAreaView, ScrollView, StyleSheet, TextInput, View } from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, TextInput, View, TouchableOpacity, Text} from "react-native";
 import { Logo } from "../componentes/Logo";
 
 
-export const TelaDoUsuario = () => {
+export const TelaDoUsuario = ({navigation}) => {
     return(
         
         <ScrollView style={estilos.gambiarra}>
@@ -63,6 +63,16 @@ export const TelaDoUsuario = () => {
 
                 </View>
 
+                <View style={estilos.posicao_button}>
+                <TouchableOpacity style={estilos.button} onPress={() => navigation.navigate('Login')}  >
+                <Text style={estilos.texto}>Voltar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={estilos.button1} onPress={() => navigation.navigate('Login')}>
+                <Text style={estilos.texto}>Confirmar</Text>
+                </TouchableOpacity>
+                </View>
+
 
 
                 
@@ -107,7 +117,7 @@ const estilos = StyleSheet.create({
 
     containerInput: {
         alignItems: 'center',
-        paddingBottom: 10,
+        marginTop: -15,
     },
 
     container: {
@@ -120,6 +130,44 @@ const estilos = StyleSheet.create({
         width: '80%',
         alignItems: 'center',
         marginBottom: 20,
-    }
+    },
+
+    button :{
+        alignItems: 'center',
+        backgroundColor: 'black',
+        padding: 10,
+        borderRadius:20,
+       
+      
+      },
+    
+      button1 :{
+        alignItems: 'center',
+        backgroundColor: 'black',
+        padding: 10,
+        borderRadius:20,
+         
+        
+      },
+    
+      texto:{
+        color: '#FF8C00',
+        
+      },
+    
+      posicao_button:{
+        flexDirection:'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        paddingLeft: 40,
+        paddingRight: 40,      
+       
+      },
+
+   
+
+    
+
+    
     
 });
