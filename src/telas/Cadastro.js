@@ -18,7 +18,7 @@ export default function Cadastro ({navigation}) {
       />
        <TextInput
         style={estilos.input}
-        placeholder="email"
+        placeholder="E-mail"
         backgroundColor='white'
       />
 
