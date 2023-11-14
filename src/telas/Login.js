@@ -3,7 +3,28 @@ import { StyleSheet, Text, TouchableOpacity, View, Button, SafeAreaView, TextInp
 import { Logo } from "../componentes/Logo";
 
 
-export default function Login({ navigation }) {
+const Login = ({ navigation }) => {
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleLogin = () => {
+    // Verificação fake de email e senha
+    const emailFake = 'ADIMIN';
+    const senhaFake = '12345';
+
+    if (email === emailFake && senha === senhaFake) {
+      // Login bem-sucedido, redireciona para a tela do usuário
+      navigation.navigate('TelaDoUsuario');
+    } else if (email !== emailFake) {
+      // Exiba uma mensagem de erro ou realize outra ação adequada
+      console.log('Email não cadastrado');
+    }else {
+      console.log('Senha incorreta');
+    }
+
+  };
+
   return (
 
     <SafeAreaView style={estilos.container}>
@@ -15,6 +36,8 @@ export default function Login({ navigation }) {
           style={estilos.input}
           placeholder="Digite seu email"
           backgroundColor='white'
+          value={email}
+          onChangeText={setEmail}
         />
 
         <Text style={estilos.texto}>Senha*</Text>
@@ -22,12 +45,16 @@ export default function Login({ navigation }) {
           style={estilos.input}
           placeholder="Digite a senha"
           backgroundColor='white'
+          secureTextEntry={true}
+          value={senha}
+          onChangeText={setSenha}
         />
 
       </View>
 
+
       <View style={estilos.containerBotao}>
-        <TouchableOpacity style={estilos.botaoLogin} onPress={() => navigation.navigate('TelaDoUsuario')}>
+        <TouchableOpacity style={estilos.botaoLogin} onPress={handleLogin}>
           <Text style={estilos.texto1}>ENTRAR</Text>
         </TouchableOpacity>
 
@@ -38,7 +65,7 @@ export default function Login({ navigation }) {
         </TouchableOpacity>
         </View>
       </View>
-
+    
 
     </SafeAreaView>
 
@@ -112,6 +139,8 @@ const estilos = StyleSheet.create({
     paddingTop: 5,
   },
 
+ 
 })
+export default Login;
 
 
