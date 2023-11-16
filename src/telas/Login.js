@@ -7,6 +7,7 @@ const Login = ({ navigation }) => {
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
 
   const handleLogin = () => {
     // Verificação fake de email e senha
@@ -18,9 +19,9 @@ const Login = ({ navigation }) => {
       navigation.navigate('TelaDoUsuario');
     } else if (email !== emailFake) {
       // Exiba uma mensagem de erro ou realize outra ação adequada
-      console.log('Email não cadastrado');
+      setErro('Email não cadastrado');
     }else {
-      console.log('Senha incorreta');
+      setErro('Senha incorreta');
     }
 
   };
@@ -51,6 +52,13 @@ const Login = ({ navigation }) => {
         />
 
       </View>
+
+
+      {erro && (
+        <View style={estilos.containerErro}>
+          <Text style={estilos.textoErro}>{erro}</Text>
+        </View>
+      )}
 
 
       <View style={estilos.containerBotao}>
@@ -137,6 +145,14 @@ const estilos = StyleSheet.create({
   botaoCadastrar: {
     flexDirection: 'row',
     paddingTop: 5,
+  },
+
+  containerErro: {
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  textoErro: {
+    color: 'red',
   },
 
  
