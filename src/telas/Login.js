@@ -10,7 +10,7 @@ const Login = ({ navigation }) => {
 
   const handleLogin = () => {
     // Verificação fake de email e senha
-    const emailFake = 'ADIMIN';
+    const emailFake = 'Admin';
     const senhaFake = '12345';
 
     if (email === emailFake && senha === senhaFake) {

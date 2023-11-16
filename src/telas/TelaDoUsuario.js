@@ -13,38 +13,55 @@ export const TelaDoUsuario = ({ navigation }) => {
       nome: 'Confiança',
       localidade: 'Curitiba - PR',
       phoneNumber: '32 98875-5200',
-      facebookLink: 'https://www.example.com',
       mapsLink: 'https://www.google.com.br/maps/place/R.+Bar%C3%A3o+de+Santo+%C3%82ngelo,+451+-+Xaxim,+Curitiba+-+PR,+81810-140',
-      instagramLink: 'https://www.example.com',
+     
     },
     {
       id: '2',
       nome: 'Urbana',
-      localidade: 'Belo Horizonte',
+      localidade: 'Belo Horizonte - MG',
       phoneNumber: '31 99422-4365',
-      facebookLink: 'https://www.example.com',
       mapsLink: 'https://www.google.com.br/maps/place/R.+Frei+Concei%C3%A7%C3%A3o+Veloso,+86+-+Alto+dos+Pinheiros,+Belo+Horizonte+-+MG,+30530-300',
-      instagramLink: 'https://www.example.com',
+   
     },
     {
       id: '3',
-      nome: 'VAZIO',
-      localidade: 'VAZIO',
-      phoneNumber: '00 00000-0000',
-      facebookLink: 'https://www.example.com',
-      mapsLink: 'https://www.example.com',
-      instagramLink: 'https://www.example.com',
+      nome: 'Sucesso',
+      localidade: 'Foz do Iguaçu - PR',
+      phoneNumber: '(45) 99910-3144',
+      mapsLink: 'https://www.google.com.br/maps/place/R.+Estanislau+Zambrzycki,+197+-+Centro,+Foz+do+Igua%C3%A7u+-+PR,+85852-200',
+      
     },
 
     {
     id: '4',
-    nome: 'Exemplo',
-    localidade: 'Curitiba - PR',
-    phoneNumber: '32 98875-5200',
-    facebookLink: 'https://www.example.com',
-    mapsLink: 'https://www.google.com.br/maps/place/R.+Bar%C3%A3o+de+Santo+%C3%82ngelo,+451+-+Xaxim,+Curitiba+-+PR,+81810-140',
-    instagramLink: 'https://www.example.com',
+    nome: 'Act-Bio',
+    localidade: 'Wenceslau Braz - PR',
+    phoneNumber: ' (43) 99967-6375',
+    mapsLink: 'https://www.google.com.br/maps/place/R.+Irm%C3%A3s+Klosienski,+135,+Wenceslau+Braz+-+PR,+84950-000',
+    
     },
+
+    {
+    id: '5',
+    nome: 'Antinseto',
+    localidade: 'Londrina - PR',
+    phoneNumber: '43 30291234',
+    mapsLink: 'https://www.google.com.br/maps/place/Dedetizadora+Antinseto+Controle+de+Pragas/@-23.3080344,-51.1857275,17z',
+    },
+
+    {
+      id: '6',
+      nome: 'Biotrat',
+      localidade: 'Pinhais - PR',
+      phoneNumber: '41 9207-4545',
+      mapsLink: 'https://www.google.com.br/maps/place/R.+Corb%C3%A9lia,+1475+-+Emiliano+Perneta,+Pinhais+-+PR,+83325-260',
+
+      }
+      
+
+
+
 
 
   ];
@@ -84,13 +101,11 @@ export const TelaDoUsuario = ({ navigation }) => {
             <Text style={estilos.input2}>{item.nome}</Text>
             <Text style={estilos.input2}>{item.localidade}</Text>
             <View style={estilos.container_button}>
-              <FontAwesome name="phone" size={25} color={'#000000'} onPress={() => openDialPad(item.phoneNumber)} style={{ marginHorizontal: 20, marginVertical: 5 }} />
-              <FontAwesome name="facebook" size={25} color={'#000000'} onPress={() => openLink(item.facebookLink)} style={{ marginHorizontal: 20, marginVertical: 5 }} />
-              <Ionicons name="location" size={25} color={'#000000'} onPress={() => openLink(item.mapsLink)} style={{ marginHorizontal: 20, marginVertical: 5 }} />
-              <FontAwesome name="instagram" size={25} color={'#000000'} onPress={() => openLink(item.instagramLink)} style={{ marginHorizontal: 20, marginVertical: 5 }} />
+              <FontAwesome name="phone" size={25} color={'#000000'} onPress={() => openDialPad(item.phoneNumber)} style={{ marginHorizontal: 30, marginVertical: 5 }} />
+              <Ionicons name="location" size={25} color={'#000000'} onPress={() => openLink(item.mapsLink)} style={{ marginHorizontal: 30, marginVertical: 5 }} />
             </View>
             <TextInput
-              style={estilos.input2}
+              
             />
           </View>
         ))}
@@ -120,11 +135,12 @@ const estilos = StyleSheet.create({
     backgroundColor: '#fff',
     width: 250,
     borderWidth: 3,
+    
   },
 
   input2: {
     height: 40,
-    margin: 12,
+    margin: 15,
     borderWidth: 1,
     padding: 10,
     borderRadius: 20,
@@ -133,7 +149,8 @@ const estilos = StyleSheet.create({
     backgroundColor: '#fff',
     width: '80%',
     borderWidth: 3,
-  },
+    
+    },
 
   container_button: {
     height: 40,
@@ -141,11 +158,14 @@ const estilos = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     alignContent: 'center',
+    alignItems:'center',
     textAlign: 'center',
+    justifyContent:'center',
     backgroundColor: '#fff',
     width: '80%',
     borderWidth: 3,
     flexDirection: 'row',
+    
   },
 
   gambiarra: {
@@ -155,6 +175,7 @@ const estilos = StyleSheet.create({
   containerInput: {
     alignItems: 'center',
     marginTop: -15,
+    
   },
 
   container: {
@@ -165,6 +186,7 @@ const estilos = StyleSheet.create({
     borderWidth: 3,
     width: '80%',
     alignItems: 'center',
+    justifyContent:'center',
     marginBottom: 20,
   },
 
